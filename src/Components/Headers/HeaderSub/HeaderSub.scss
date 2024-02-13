@@ -1,0 +1,48 @@
+@import '../../../scss/variables';
+
+.HeaderSub {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $Secondary-Charcoal;
+	color: $main-white;
+
+	&__Nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+
+		&__Lists {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			width: 100%;
+
+			&__Item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.5rem;
+				padding: 0.5rem 1rem;
+				cursor: pointer;
+				font-size: 0.8rem;
+				opacity: 0.5;
+				transition: 0.3s ease-in-out;
+				width: 100%;
+
+				&:not(:last-child) {
+					border-right: 1px solid;
+				}
+
+				&__Link {
+					width: 300px;
+				}
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

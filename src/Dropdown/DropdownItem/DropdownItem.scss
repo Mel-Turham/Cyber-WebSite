@@ -1,0 +1,24 @@
+@import '../../scss/variables';
+
+.dropdown-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.2rem 0;
+
+	.name {
+		font-weight: 600;
+	}
+
+	.stocks {
+		font-weight: 100;
+		color: $gray-dack;
+		font-size: 12px;
+	}
+
+	.inputCheck {
+		accent-color: #000;
+		padding: 0.3rem;
+		cursor: pointer;
+	}
+}

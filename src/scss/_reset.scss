@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	background-color: hsl(0, 0%, 98%);
+	font-size: 1rem;
+	padding: 2rem 1rem 0;
+	font-family: SF Pro Display Regular;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+a {
+	text-decoration: none;
+	font-family: SFUIDisplay;
+}
+
+ul {
+	list-style-type: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}

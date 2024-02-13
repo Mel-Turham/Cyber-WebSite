@@ -1,0 +1,344 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+@import '../../scss/fonts';
+
+.SectionHero {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	overflow: hidden;
+	padding: 0 8rem;
+	height: 76dvh;
+	@include lineargradient;
+
+	.Left {
+		display: flex;
+		min-width: 25rem;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1.5rem;
+		flex: 1 0 0;
+
+		& p:first-child {
+			color: #fff;
+
+			font-family: Figtree;
+			font-size: 0.8rem;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 2rem;
+			opacity: 0.4;
+		}
+
+		h1 {
+			font-family: SF Pro Display Regular;
+			font-size: 4.5rem;
+			font-style: normal;
+			font-weight: 100;
+			line-height: 4.5rem;
+			letter-spacing: -0.06rem;
+			color: $main-white;
+
+			span {
+				font-family: SF Pro Display Bold;
+			}
+		}
+
+		& p:nth-child(3) {
+			font-size: 1.3rem;
+			color: $gray-dack;
+		}
+	}
+
+	.Right {
+		top: 18%;
+		position: relative;
+
+		.img {
+			height: 100%;
+		}
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+	grid-template-rows: auto 1fr;
+	align-content: center;
+
+	.squareBanner {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		.containerImage {
+			position: relative;
+			width: 35%;
+		}
+
+		.containerBody {
+			width: 60%;
+			margin: 0 auto;
+			padding: 0.5rem;
+
+			p {
+				color: #909090;
+				font-family: 'Figtree';
+				font-size: 0.775rem;
+				font-style: normal;
+				font-weight: 200;
+				line-height: 1.5rem;
+				margin: 1rem 0;
+			}
+
+			h3 {
+				font-family: 'SF Pro Display Bold';
+				font-size: 24px;
+				font-style: normal;
+				color: hsl(0, 0%, 21%);
+				opacity: 0.8;
+			}
+		}
+
+		&:first-child {
+			grid-column: span 2;
+			background-color: $main-white;
+			.containerBody {
+				h3 {
+					font-size: 2.5rem;
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			grid-column: span 2;
+			grid-row: span 2;
+			flex-direction: row-reverse;
+			background: hsl(0, 0%, 93%);
+
+			.containerBody {
+				h3 {
+					font-size: 3.5rem;
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			background: hsl(0, 0%, 93%);
+		}
+
+		&:last-child {
+			background: #353535;
+			color: $main-white;
+
+			.containerBody {
+				h3 {
+					color: $main-white;
+				}
+			}
+		}
+	}
+}
+
+.Category {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.2rem 5rem;
+	height: 22rem;
+	width: 80%;
+	margin: 0 auto;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		gap: 1rem;
+		width: 100%;
+
+		.top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.containerArows {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.icon {
+					width: 1.8rem;
+					height: 1rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					overflow: hidden;
+					cursor: pointer;
+
+					&.Next {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+
+		.containerCategories {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.cartCategory {
+				width: 7.5rem;
+				min-width: 5rem;
+				background-color: #ededed;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				border-radius: 8px;
+				padding: 0.6rem 0;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.Products {
+	margin-top: -50px;
+	.container-products {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 0;
+
+		margin: 0 auto 2rem;
+
+		width: fit-content;
+
+		.header-product .nav ul {
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			gap: 2rem;
+
+			li a {
+				display: block;
+				color: $main-black;
+				font-size: 1.1rem;
+				font-family: Figtree;
+				position: relative;
+
+				&.active::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 2.8px;
+					left: 0;
+					bottom: -2px;
+					background-color: $main-black;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+
+	.container-cards {
+		margin: auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 1.2rem;
+		place-content: center;
+	}
+}
+
+.banner {
+	margin-top: 4rem;
+}
+
+.Summer {
+	margin-top: 4rem;
+	height: 448px;
+	width: 100%;
+	background: linear-gradient(100deg, #2e2e2e 42.36%, #000 98.65%);
+	display: grid;
+	place-content: center;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+
+	.container-text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 10px;
+
+		h2 {
+			font-size: 72px;
+			line-height: 72px;
+			letter-spacing: -0.72px;
+			font-weight: 100;
+		}
+
+		p {
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 32px;
+			color: #787878;
+			text-align: center;
+		}
+
+		.button {
+			display: flex;
+			padding: 16px 56px;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+			border-radius: 6px;
+			background: transparent;
+			border: 1px solid #ededed;
+			font-size: 1rem;
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+
+	.img {
+		width: 200px;
+		position: absolute;
+
+		&.right-top {
+			right: 1px;
+			top: -40px;
+		}
+
+		&.right-bottom {
+			right: -16px;
+			bottom: 0px;
+			width: 400px;
+		}
+
+		&.top-left {
+			left: 300px;
+			top: 0;
+			width: 350px;
+			z-index: 1;
+		}
+
+		&.middle-left {
+			top: 50px;
+			left: 60px;
+			width: 250px;
+		}
+
+		&.bottom-left {
+			bottom: -30px;
+			left: 0;
+
+			width: 350px;
+		}
+	}
+}

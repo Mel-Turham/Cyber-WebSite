@@ -1,0 +1,107 @@
+@import '../../../scss/variables';
+@import '../../../scss/fonts';
+
+.headerTop {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	align-self: stretch;
+	margin-bottom: 1.5rem;
+	background-color: $main-white;
+
+	.logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 6rem;
+		height: 2rem;
+		padding: 0rem 0.00294rem 0.2325rem 0rem;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#SearchField {
+		display: flex;
+		height: 3.5rem;
+		padding: 0.7rem;
+		align-items: center;
+		gap: 0.5rem;
+		flex: 1 0 0;
+		border-radius: 0.5rem;
+		background-color: $white-light;
+
+		.labelForSeachIput {
+			width: 20%;
+		}
+
+		#search {
+			width: 90%;
+			padding: 0.5rem 0.2rem;
+			height: 2rem;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			font-size: 1.1rem;
+			font-family: 'SF Pro Display Bold';
+
+			&::placeholder {
+				font-family: 'SF Pro Display Bold';
+				font-size: 0.875rem;
+				font-style: normal;
+				line-height: 1.125rem;
+			}
+		}
+	}
+
+	.containerNav {
+		display: flex;
+		padding: 1rem 3rem;
+		align-items: center;
+		gap: 1rem;
+		align-self: stretch;
+
+		.lists {
+			display: flex;
+			align-items: flex-start;
+			gap: 2.25rem;
+
+			.listItem {
+				display: inline-block;
+
+				.Link {
+					font-size: 1rem;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					color: $gray-light;
+					padding: 0.4rem 0.5rem;
+					transition: 0.3s ease-in-out;
+					border-radius: 5px;
+					font-family: SF Pro Display Medium;
+
+					&:hover {
+						background-color: $gray-light;
+						color: $main-white;
+					}
+
+					&.active {
+						color: $main-white;
+						background: #000;
+					}
+				}
+			}
+		}
+	}
+
+	.containerIcons {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		align-self: stretch;
+
+		.Icon {
+			width: 1.5rem;
+			cursor: pointer;
+		}
+	}
+}

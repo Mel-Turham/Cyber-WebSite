@@ -1,0 +1,23 @@
+@import '../../scss/variables';
+
+.containerSearch {
+	display: flex;
+	align-items: center;
+	background: $white-light;
+	margin-bottom: 10px;
+	gap: 0.4rem;
+	padding: 8px 4px;
+	border-radius: 8px;
+
+	.searchIcon {
+		width: 20px;
+	}
+
+	#search {
+		border: none;
+		background: none;
+		outline: none;
+		height: 100%;
+		width: 80%;
+	}
+}

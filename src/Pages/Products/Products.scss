@@ -1,0 +1,109 @@
+@import '../../scss/variables';
+@import '../../scss/fonts';
+
+.contents {
+	display: flex;
+	gap: 15px;
+	margin: 2.5rem auto 1rem;
+
+	&__left {
+		flex: 0.48;
+		padding: 10px;
+	}
+
+	&__right {
+		flex: 2;
+
+		&__header {
+			display: flex;
+			align-items: center;
+
+			&__left {
+				flex: 2;
+
+				p {
+					display: flex;
+					align-items: flex-start;
+					width: fit-content;
+					gap: 10px;
+					color: $gray-light;
+
+					span {
+						font-weight: 600;
+						color: $main-black;
+					}
+				}
+			}
+
+			&__right {
+				flex: 1;
+
+				&__header {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					border: 1px solid $gray-light;
+					border-radius: 4px;
+					padding: 0.5rem;
+					position: relative;
+					cursor: pointer;
+
+					.btn-open {
+						border: none;
+						outline: none;
+						background-color: transparent;
+						transform: rotate(90deg);
+						cursor: pointer;
+						display: grid;
+						place-content: center;
+						transition: 0.3s ease-in-out;
+
+						&.active {
+							transform: rotate(270deg);
+						}
+
+						img {
+							width: 20px;
+						}
+					}
+
+					.Dropdown {
+						position: absolute;
+						top: 110%;
+						left: 50%;
+						transform: translate(-50%, -30%);
+						width: 260px;
+						background-color: $white-light;
+						box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+						border-radius: 4px;
+						padding: 0.893rem;
+
+						.listSearch {
+							display: flex;
+							flex-direction: column;
+							gap: 0.9rem;
+						}
+
+						.searchItem {
+							transition: 0.4s ease-in-out;
+							padding: 0.4rem;
+							font-size: 1rem;
+							border-radius: 3px;
+
+							&:hover {
+								background-color: $main-white;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.productContainer {
+			margin-top: 2rem;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+			gap: 20px;
+		}
+	}
+}

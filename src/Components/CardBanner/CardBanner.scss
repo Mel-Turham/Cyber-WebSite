@@ -1,0 +1,89 @@
+@import '../../scss/variables';
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	place-content: center;
+	margin: 0 auto;
+
+	.card-banner {
+		max-width: 100%;
+
+		.header-card {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.header-card-image {
+				max-width: 210px;
+			}
+		}
+
+		&:nth-child(1) {
+			background: $main-white;
+
+			.header-card-image {
+				position: absolute;
+				max-width: 190px;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				object-fit: cover;
+			}
+		}
+		&:nth-child(2) {
+			background: $white-light;
+
+			.header-card-image {
+				width: 100%;
+				max-width: 80%;
+				position: absolute;
+				right: px;
+				top: -1px;
+				right: -2px;
+				object-fit: cover;
+			}
+		}
+		&:nth-child(3) {
+			background: hsla(0, 0%, 57%, 0.4);
+		}
+		&:nth-child(4) {
+			background-color: $Secondary-Charcoal;
+
+			.header-card-image {
+				position: absolute;
+				right: 0;
+				top: 63%;
+				transform: translateY(-50%);
+			}
+
+			.footer-card {
+				color: $main-white;
+			}
+		}
+	}
+
+	.header-card {
+		min-height: 12.5rem;
+		height: 220px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+.footer-card {
+	margin: 1rem auto 0.8rem;
+	padding: 0 1rem;
+
+	h3 {
+		font-size: 1.5rem;
+		text-transform: capitalize;
+	}
+
+	.description {
+		margin: 1rem 0;
+		color: $gray-light;
+		font-size: 15px;
+	}
+}

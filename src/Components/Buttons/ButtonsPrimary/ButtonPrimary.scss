@@ -1,0 +1,23 @@
+@import '../../../scss/variables';
+@import '../../../scss/fonts';
+
+.buttonPrimary {
+	display: flex;
+	padding: 0.8rem 3rem;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	background: none;
+	border: 1px solid $main-white;
+	color: #fff;
+	border-radius: 0.375rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	font-weight: 500;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: rgba(146, 146, 146, 0.046);
+	}
+}
