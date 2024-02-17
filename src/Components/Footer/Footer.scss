@@ -1,5 +1,4 @@
 @import '../../scss/variables';
-@import '../../scss/fonts';
 
 .Footer {
 	display: flex;
@@ -49,7 +48,6 @@
 					a {
 						display: block;
 						color: $gray-light;
-						font-family: Figtree;
 						font-size: 0.938rem;
 
 						transition: 0.2s ease-in-out;

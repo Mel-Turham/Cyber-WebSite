@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 *,
 *::after,
 *::before {
@@ -14,7 +15,7 @@ body {
 	background-color: hsl(0, 0%, 98%);
 	font-size: 1rem;
 	padding: 2rem 1rem 0;
-	font-family: SF Pro Display Regular;
+	font-family: 'Inter Tight', sans-serif;
 }
 
 h1,
@@ -32,7 +33,7 @@ p {
 
 a {
 	text-decoration: none;
-	font-family: SFUIDisplay;
+	font-family: 'Inter Tight', sans-serif;
 }
 
 ul {

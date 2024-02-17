@@ -2,7 +2,7 @@ import './Home.scss';
 import CardBanner from '../../Components/CardBanner/CardBanner';
 
 import Footer from '../../Components/Footer/Footer';
-import { homeProducts} from '../../datas/data';
+import { homeProducts } from '../../datas/data';
 import { easeOut, motion, spring } from 'framer-motion';
 import Card from '../../Components/Card/Card';
 import Headers from './../../Components/Headers/Headers';
@@ -50,7 +50,7 @@ const Home = () => {
 							Pro.Beyond.
 						</motion.p>
 						<h1>
-							Iphone 14 <span>Pro</span>
+							IPhone 14 <span>Pro</span>
 						</h1>
 						<p>Created to change everything for the better. For everyone</p>
 						<ButtonPrimary />

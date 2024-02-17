@@ -1,6 +1,5 @@
 @import '../../scss/variables';
 @import '../../scss/mixins';
-@import '../../scss/fonts';
 
 .SectionHero {
 	display: flex;
@@ -23,8 +22,6 @@
 
 		& p:first-child {
 			color: #fff;
-
-			font-family: Figtree;
 			font-size: 0.8rem;
 			font-style: normal;
 			font-weight: 600;
@@ -33,16 +30,15 @@
 		}
 
 		h1 {
-			font-family: SF Pro Display Regular;
 			font-size: 4.5rem;
 			font-style: normal;
-			font-weight: 100;
+			font-weight: 200;
 			line-height: 4.5rem;
 			letter-spacing: -0.06rem;
 			color: $main-white;
 
 			span {
-				font-family: SF Pro Display Bold;
+				font-weight: 600;
 			}
 		}
 
@@ -85,16 +81,14 @@
 
 			p {
 				color: #909090;
-				font-family: 'Figtree';
 				font-size: 0.775rem;
 				font-style: normal;
-				font-weight: 200;
+				font-weight: 500;
 				line-height: 1.5rem;
 				margin: 1rem 0;
 			}
 
 			h3 {
-				font-family: 'SF Pro Display Bold';
 				font-size: 24px;
 				font-style: normal;
 				color: hsl(0, 0%, 21%);
