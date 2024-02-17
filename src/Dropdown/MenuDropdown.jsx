@@ -13,6 +13,7 @@ const MenuDropdown = () => {
 			[id]: !prevState[id],
 		}));
 	};
+
 	return (
 		<div className='menu-dropdown'>
 			<ul className='menu-dropdown__items'>
@@ -21,7 +22,11 @@ const MenuDropdown = () => {
 						<section key={Math.random(Math.floor() * items.length)}>
 							<div className='Top' onClick={() => handleHide(id)}>
 								<h3>{name}</h3>
-								<img className={`arrowDown ${isHide[id] ? 'active': ''}` } src={ArrowDown} alt='Arrow icon' />
+								<img
+									className={`arrowDown ${isHide[id] ? 'active' : ''}`}
+									src={ArrowDown}
+									alt='Arrow icon'
+								/>
 							</div>
 
 							{isHide[id] ? (
@@ -38,7 +43,7 @@ const MenuDropdown = () => {
 										);
 									})}
 								</div>
-							): null}
+							) : null}
 						</section>
 					);
 				})}

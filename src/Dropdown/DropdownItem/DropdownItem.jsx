@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types';
-import './DropdownItem.scss'
+import './DropdownItem.scss';
 
 const DropdownItem = ({ id, item, value, stocks }) => {
 	return (
