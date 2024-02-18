@@ -1,1 +1,209 @@
 @import '../../scss/variables';
+
+.Details {
+	display: flex;
+	margin: 2rem auto 0;
+	gap: 1.5rem;
+	width: 90%;
+
+	&__left {
+		flex: 2;
+		display: flex;
+		align-items: end;
+		justify-content: flex-end;
+		height: 30%;
+
+		img {
+			max-height: fit-content;
+			height: 60%;
+		}
+	}
+
+	&__right {
+		flex: 3;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		.product-name {
+			font-size: 2rem;
+			text-transform: capitalize;
+			width: fit-content;
+		}
+
+		.prices {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			.new-price {
+				font-weight: 600;
+				font-size: 18px;
+			}
+
+			del {
+				font-size: 14px;
+				color: $gray-light;
+			}
+		}
+
+		.container-colors {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			p {
+				font-size: 18px;
+				font-weight: 500;
+			}
+
+			.color {
+				height: 30px;
+				width: 30px;
+				background-color: black;
+				border-radius: 50%;
+				cursor: pointer;
+
+				&.purple {
+					background-color: purple;
+				}
+				&.red {
+					background-color: red;
+				}
+				&.gold {
+					background-color: goldenrod;
+				}
+				&.grey {
+					background-color: grey;
+				}
+			}
+		}
+
+		.memories {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 5px 0;
+
+			.memory {
+				text-align: center;
+				display: grid;
+				place-content: center;
+				padding: 0.4rem 1.3rem;
+				border-radius: 5px;
+				border: 0.4px solid #ccc;
+				color: $gray-light;
+				transition: all 0.3s ease-in-out;
+				font-size: 0.6rem;
+				cursor: pointer;
+				font-weight: 500;
+
+				&:hover {
+					color: $main-black;
+					border: 1px solid $main-black;
+				}
+			}
+		}
+
+		.capacities {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(140.33px, 1fr));
+			gap: 10px;
+			width: 70%;
+
+			.capacity {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				padding: 0.8rem 0.5rem;
+				background-color: $white-light;
+				border-radius: 8px;
+
+				.capacity-item {
+					display: flex;
+					flex-direction: column;
+					gap: 0.8px;
+
+					& span:first-child {
+						font-size: 12px;
+						color: $gray-light;
+					}
+
+					& span:nth-child(2) {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		.desc {
+			font-size: 14px;
+			color: $gray-light;
+			margin: 5px 0;
+
+			span {
+				color: $main-black;
+				font-weight: 500;
+				border-bottom: 1px solid $main-black;
+				cursor: pointer;
+			}
+		}
+
+		.container-buttons {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			button {
+				min-width: 250px;
+				height: 50px;
+				border: 1px solid $main-black;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 5px;
+				border-radius: 6px;
+				font-weight: 600;
+				font-size: 14.5px;
+				cursor: pointer;
+			}
+
+			& button:first-child {
+				background-color: transparent;
+			}
+
+			& button:nth-child(2) {
+				background-color: $main-black;
+				color: $main-white;
+			}
+		}
+
+		.deliveries {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			margin-top: 10px;
+
+			.delivery {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				.delivery-item {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					& span:first-child {
+						font-size: 10px;
+						color: $gray-light;
+					}
+					& span:nth-child(2) {
+						font-size: 12px;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+}

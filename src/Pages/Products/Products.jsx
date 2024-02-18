@@ -1,12 +1,11 @@
 import './Products.scss';
 import { ProductsItem } from '../../datas/data';
-import HeaderTop from './../../Components/Headers/HeaderTop/HeaderTop';
-import HeaderSub from './../../Components/Headers/HeaderSub/HeaderSub';
 import Arrow from '../../assets/Svgs/ArrowPrev.svg';
 import { useState } from 'react';
 import Card from './../../Components/Card/Card';
 import Footer from './../../Components/Footer/Footer';
 import MenuDropdown from '../../Dropdown/MenuDropdown';
+import Headers from '../../Components/Headers/Headers';
 
 const Products = () => {
 	const typeOfSearch = [
@@ -24,15 +23,10 @@ const Products = () => {
 
 	return (
 		<>
-			<header className='headers'>
-				<HeaderTop />
-				<HeaderSub />
-			</header>
-
-
+			<Headers />
 			<div className='contents'>
 				<aside className='contents__left'>
-					<MenuDropdown/>
+					<MenuDropdown />
 				</aside>
 
 				<aside className='contents__right'>

@@ -140,6 +140,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 	padding: 0.2rem 5rem;
 	height: 22rem;
 	width: 80%;
@@ -221,7 +222,6 @@
 				display: block;
 				color: $main-black;
 				font-size: 1.1rem;
-				font-family: Figtree;
 				position: relative;
 
 				&.active::after {
