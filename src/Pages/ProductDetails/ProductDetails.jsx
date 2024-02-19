@@ -12,7 +12,7 @@ const ProductDetails = () => {
 	const [changeText, setChangeText] = useState(true);
 
 	const handleChangeText = () => {
-		setChangeText(!changeText);
+		setChangeText((prev) => !prev);
 	};
 	return (
 		<>

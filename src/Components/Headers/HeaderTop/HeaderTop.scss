@@ -75,15 +75,7 @@
 					border-radius: 5px;
 					color: $main-black;
 
-					&:hover {
-						background-color: $gray-light;
-						color: $main-white;
-					}
-
-					&.active {
-						color: $main-white;
-						background: #000;
-					}
+					
 				}
 			}
 		}
@@ -99,5 +91,70 @@
 			width: 1.5rem;
 			cursor: pointer;
 		}
+	}
+
+	.open-nav {
+		z-index: 30;
+		width: 60px;
+		height: 60px;
+		border: none;
+		outline: 0;
+		cursor: pointer;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		background: transparent;
+		background: $white-light;
+		border-radius: 10%;
+		box-shadow: 0 0 70px rgba(10, 10, 10, 0.333);
+
+		.btn-open-nav-icon {
+			font-size: 2rem;
+		}
+	}
+}
+
+// Media query tablet
+
+@media (max-width: 991px) {
+	.headerTop {
+		.logo {
+			z-index: 20;
+		}
+		.containerNav {
+			z-index: 10;
+			position: fixed;
+			right: 0;
+			top: 2%;
+			height: 100vh;
+			width: 70%;
+			background-color: $main-white;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0;
+
+			.lists {
+				flex-direction: column;
+
+				.listItem .Link {
+					font-size: 1.8rem;
+				}
+			}
+
+			&.screen-md {
+				display: none;
+			}
+		}
+		.open-nav {
+			display: flex;
+		}
+	}
+}
+
+// media query mobile
+
+@media (max-width: 676px) {
+	.headerTop .containerNav {
+		width: 100%;
 	}
 }
