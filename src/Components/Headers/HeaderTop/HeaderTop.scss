@@ -4,7 +4,6 @@
 	display: flex;
 	align-items: center;
 	gap: 2rem;
-	align-self: stretch;
 	margin-bottom: 1.5rem;
 	background-color: $main-white;
 
@@ -74,8 +73,31 @@
 					transition: 0.3s ease-in-out;
 					border-radius: 5px;
 					color: $main-black;
+					position: relative;
 
-					
+					&::after {
+						content: '';
+						left: 0;
+						bottom: -3px;
+						height: 4px;
+						width: 100%;
+						background: #000;
+						position: absolute;
+						border-radius: 5px;
+						transform: scale(0);
+						transform-origin: left;
+						transition: all 300ms ease-in-out;
+					}
+
+					&:hover::after {
+						transform: scale(1);
+						transform-origin: right;
+					}
+
+					&.active::after {
+						transform: scale(1);
+						transform-origin: center;
+					}
 				}
 			}
 		}

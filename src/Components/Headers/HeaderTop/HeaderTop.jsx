@@ -15,13 +15,27 @@ const HeaderTop = () => {
 
 	const variants = {
 		hidden: {
-			opacity: 0,
-			x: 300,
+			x: '100vw',
 		},
 
 		open: {
-			opacity: 1,
 			x: 0,
+			transition: {
+				when: 'beforeChildren',
+				staggerChildren: 0.2,
+			},
+		},
+	};
+
+	const listVariants = {
+		hidden: {
+			x: -10,
+			opacity: 0,
+		},
+
+		open: {
+			x: 0,
+			opacity: 1,
 		},
 	};
 
@@ -95,11 +109,15 @@ const HeaderTop = () => {
 				>
 					<ul className='lists'>
 						{Links.map((Link) => (
-							<li className='listItem' key={Link.name}>
+							<motion.li
+								variants={listVariants}
+								className='listItem'
+								key={Link.name}
+							>
 								<NavLink className='Link ' to={Link.paht}>
 									{Link.name}
 								</NavLink>
-							</li>
+							</motion.li>
 						))}
 					</ul>
 				</motion.nav>

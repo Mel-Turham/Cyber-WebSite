@@ -154,6 +154,8 @@
 			display: flex;
 			align-items: center;
 			gap: 10px;
+			flex-wrap: wrap;
+			margin: 0 auto;
 
 			button {
 				min-width: 250px;
