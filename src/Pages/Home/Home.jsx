@@ -101,7 +101,7 @@ const Home = () => {
 								ease: 'circOut',
 							}}
 						>
-							Created to change everything for the better. For everyone
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum aliquid dicta tenetur dignissimos modi, culpa inventore alias veniam accusantium nam dolorem ullam atque eum ipsam obcaecati dolores, tempora suscipit tempore maiores soluta unde. Suscipit totam iure temporibus amet, quaerat repudiandae tempore cumque expedita velit iusto, doloribus eveniet, ipsam laborum et.
 						</motion.p>
 						<ButtonPrimary />
 					</motion.div>

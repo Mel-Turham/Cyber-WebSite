@@ -4,7 +4,6 @@
 	display: flex;
 	align-items: center;
 	gap: 2rem;
-	margin-bottom: 1.5rem;
 	background-color: $main-white;
 
 	.logo {
@@ -141,6 +140,7 @@
 @media (max-width: 991px) {
 	.headerTop {
 		justify-content: space-between;
+		padding: 1rem 0.6rem;
 		.logo {
 			z-index: 20;
 		}

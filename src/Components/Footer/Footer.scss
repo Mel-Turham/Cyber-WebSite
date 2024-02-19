@@ -2,12 +2,13 @@
 
 .Footer {
 	display: flex;
-	padding: 104px 130px;
+	padding: 50px 80px 10px;
 	flex-direction: column;
 	justify-content: center;
 	gap: 24px;
 	background: $main-black;
 	color: $main-white;
+	margin-top: 20px;
 
 	.Footer__container {
 		display: grid;
