@@ -117,8 +117,8 @@
 
 	.open-nav {
 		z-index: 30;
-		width: 60px;
-		height: 60px;
+		width: 40px;
+		height: 30px;
 		border: none;
 		outline: 0;
 		cursor: pointer;
@@ -140,6 +140,7 @@
 
 @media (max-width: 991px) {
 	.headerTop {
+		justify-content: space-between;
 		.logo {
 			z-index: 20;
 		}
@@ -178,5 +179,11 @@
 @media (max-width: 676px) {
 	.headerTop .containerNav {
 		width: 100%;
+	}
+
+	.headerTop {
+		#SearchField {
+			display: none;
+		}
 	}
 }

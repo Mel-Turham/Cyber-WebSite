@@ -4,12 +4,11 @@
 .SectionHero {
 	display: flex;
 	align-items: center;
-	align-content: center;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	overflow: hidden;
 	padding: 0 8rem;
-	height: 76dvh;
+	height: 100vh;
 	@include lineargradient;
 
 	.Left {
@@ -58,11 +57,47 @@
 	}
 }
 
+// media query tablette
+
+@media (max-width: 61.938rem) {
+	.SectionHero {
+		padding: 0 3rem;
+		justify-content: center;
+
+		.Left {
+			width: 100%;
+			margin: 3rem 4rem;
+			gap: 0.8rem;
+		}
+
+		.Right {
+			top: 0;
+		}
+	}
+}
+
+// media query mobile phone
+
+@media (max-width: 676px) {
+	.SectionHero {
+		.Left {
+			align-items: center;
+			text-align: center;
+
+			& p:nth-child(3) {
+				font-size: 1.2rem;
+				text-wrap: wrap;
+				padding: 0 5px;
+				margin: 1rem 0;
+			}
+		}
+	}
+}
+
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
-	grid-template-rows: auto 1fr;
-	align-content: center;
+	gap: 5px;
 
 	.squareBanner {
 		display: flex;
@@ -136,15 +171,55 @@
 	}
 }
 
+// media query grid
+
+@media (max-width: 991px) {
+	.grid {
+		.squareBanner {
+			.containerImage {
+				width: 40%;
+
+				img {
+					width: 100%;
+					height: 270px;
+					z-index: 2;
+				}
+			}
+
+			.containerBody {
+				p {
+					font-size: 1.3rem;
+				}
+			}
+
+			&:first-child {
+				grid-column-start: 1;
+				grid-column-end: 1;
+			}
+
+			&:nth-child(2) {
+				grid-column: auto;
+				grid-row: auto;
+				flex-direction: row-reverse;
+				background: hsl(0, 0%, 93%);
+
+				.containerBody {
+					h3 {
+						font-size: 2.5rem;
+					}
+				}
+			}
+		}
+	}
+}
+
 .Category {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-wrap: wrap;
-	padding: 0.2rem 5rem;
-	height: 22rem;
+	padding: 0.2rem 4rem;
+	margin: 3rem auto;
 	width: 80%;
-	margin: 0 auto;
 
 	.container {
 		display: flex;
@@ -157,11 +232,14 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			width: 73%;
+			margin: 2rem auto;
 
 			.containerArows {
 				display: flex;
 				align-items: center;
-				justify-content: center;
+				justify-content: end;
+				width: 50%;
 
 				.icon {
 					width: 1.8rem;
@@ -180,59 +258,75 @@
 		}
 
 		.containerCategories {
-			width: 100%;
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 20px;
 
 			.cartCategory {
-				width: 7.5rem;
-				min-width: 5rem;
+				width: 6rem;
 				background-color: #ededed;
 				display: flex;
 				align-items: center;
 				flex-direction: column;
 				border-radius: 8px;
-				padding: 0.6rem 0;
+				padding: 0.8rem;
 				cursor: pointer;
+				font-size: 13px;
 			}
 		}
 	}
 }
 
+@media (max-width: 991px) {
+	.Category {
+		padding: 0;
+		width: 100%;
+	}
+
+	.containerCategories {
+		gap: 5px;
+		width: fit-content;
+	}
+}
+
 .Products {
-	margin-top: -50px;
 	.container-products {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 1rem 0;
-
 		margin: 0 auto 2rem;
-
 		width: fit-content;
 
 		.header-product .nav ul {
 			display: flex;
 			align-items: center;
-			justify-content: start;
-			gap: 2rem;
+			justify-content: center;
+			gap: 1rem;
 
-			li a {
-				display: block;
-				color: $main-black;
-				font-size: 1.1rem;
-				position: relative;
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				a {
+					display: block;
+					color: $main-black;
+					font-size: 1.1rem;
+					position: relative;
+					text-align: center;
 
-				&.active::after {
-					content: '';
-					position: absolute;
-					width: 100%;
-					height: 2.8px;
-					left: 0;
-					bottom: -2px;
-					background-color: $main-black;
-					border-radius: 5px;
+					&.active::after {
+						content: '';
+						position: absolute;
+						width: 100%;
+						height: 2.8px;
+						left: 0;
+						bottom: -2px;
+						background-color: $main-black;
+						border-radius: 5px;
+					}
 				}
 			}
 		}
@@ -241,7 +335,7 @@
 	.container-cards {
 		margin: auto;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
 		gap: 1.2rem;
 		place-content: center;
 	}
@@ -333,6 +427,33 @@
 			left: 0;
 
 			width: 350px;
+		}
+	}
+}
+
+// media query tablette summer
+
+@media (max-width: 991px) {
+	.Summer {
+		.img {
+			width: 100px;
+
+			&.right-bottom {
+				width: 300px;
+			}
+
+			&.top-left {
+				width: 200px;
+			}
+
+			&.middle-left {
+				width: 190px;
+				top: -10px;
+			}
+
+			&.bottom-left {
+				width: 200px;
+			}
 		}
 	}
 }

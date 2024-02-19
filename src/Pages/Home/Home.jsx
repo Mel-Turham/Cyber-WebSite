@@ -27,12 +27,31 @@ import MiddelLeft from '../../assets/images/mid-left.png';
 import BottomLeft from '../../assets/images/bottom-left.png';
 
 const Home = () => {
+	const varianteLeft = {
+		isLoad: {
+			opacity: 0,
+		},
+		setIsLoded: {
+			opacity: 1,
+		},
+
+		transition: {
+			duration: 0.5,
+			ease: 'easeOut',
+		},
+	};
+
 	return (
 		<>
 			<main>
 				<Headers />
 				<section className='SectionHero'>
-					<div className='Left'>
+					<motion.div
+						className='Left'
+						inherit='isLoad'
+						animate='setIsLoded'
+						variants={varianteLeft}
+					>
 						<motion.p
 							initial={{
 								y: 100,
@@ -43,18 +62,49 @@ const Home = () => {
 								opacity: 0.5,
 							}}
 							transition={{
-								duration: 0.4,
+								duration: 0.5,
+								delay: 0.2,
 								ease: 'circOut',
 							}}
 						>
 							Pro.Beyond.
 						</motion.p>
-						<h1>
+						<motion.h1
+							initial={{
+								y: 100,
+								opacity: 0,
+							}}
+							animate={{
+								y: 0,
+								opacity: 1,
+							}}
+							transition={{
+								delay: 0.6,
+								duration: 0.5,
+								ease: 'circOut',
+							}}
+						>
 							IPhone 14 <span>Pro</span>
-						</h1>
-						<p>Created to change everything for the better. For everyone</p>
+						</motion.h1>
+						<motion.p
+							initial={{
+								y: 100,
+								opacity: 0,
+							}}
+							animate={{
+								y: 0,
+								opacity: 1,
+							}}
+							transition={{
+								delay: 1,
+								duration: 0.5,
+								ease: 'circOut',
+							}}
+						>
+							Created to change everything for the better. For everyone
+						</motion.p>
 						<ButtonPrimary />
-					</div>
+					</motion.div>
 
 					<div className='Right'>
 						<motion.img

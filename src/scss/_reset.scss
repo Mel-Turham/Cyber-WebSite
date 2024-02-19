@@ -22,6 +22,12 @@ body {
 	font-family: 'Inter Tight', sans-serif;
 }
 
+@media (max-width: 676px) {
+	body {
+		padding: 0.1rem;
+	}
+}
+
 h1,
 h2,
 h3,
