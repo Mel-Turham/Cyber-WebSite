@@ -1,0 +1,73 @@
+@import '../../../scss/variables';
+.title {
+	font-size: 1.66rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 2rem 0;
+}
+
+.contianer-comments {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	position: relative;
+
+	.comments-items {
+		display: grid;
+		grid-template-columns: 60px 1fr;
+		gap: 1rem;
+		padding: 3rem 0 0;
+
+		.image {
+			height: 100%;
+			width: 100%;
+		}
+
+		.comment-item {
+			display: flex;
+			flex-direction: column;
+			gap: 13px;
+
+			.item-top {
+				display: flex;
+				justify-content: space-between;
+
+				.userName {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+
+					& span:first-child {
+						font-size: 14px;
+						font-weight: 500;
+					}
+
+					& .stars .icon-star {
+						font-size: 14.8px;
+						color: rgb(255, 217, 0);
+					}
+				}
+
+				& > span {
+					height: fit-content;
+					font-size: 13.22px;
+					color: $gray-light;
+				}
+			}
+		}
+		.text {
+			font-size: 15.2943px;
+			color: $gray-light;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		height: 80px;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(to top, rgba(255, 255, 255, 3), transparent);
+	}
+}

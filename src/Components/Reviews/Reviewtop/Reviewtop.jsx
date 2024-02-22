@@ -4,7 +4,7 @@ import { FaStar, FaRegStarHalfStroke } from 'react-icons/fa6';
 const Reviewtop = () => {
 	return (
 		<section className='reviewTop'>
-			<h2 className='title'>Reviews</h2>
+			<h3 className='title'>Reviews</h3>
 			<div className='container-reiview'>
 				<div className='left'>
 					<div className='left-top'>

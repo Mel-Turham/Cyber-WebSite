@@ -8,7 +8,7 @@
 	margin: 3rem auto;
 
 	.title {
-		font-size: 2rem;
+		font-size: 1.66rem;
 		font-weight: 500;
 		text-transform: uppercase;
 	}
@@ -18,7 +18,7 @@
 		align-items: center;
 		flex-wrap: wrap;
 		gap: 2rem;
-		width: 82%;
+		width: 90%;
 		margin: 0 auto;
 
 		.left {
@@ -83,9 +83,9 @@
 
 				& .line {
 					flex: 7;
-					height: 3.5px;
+					height: 3px;
 					border-radius: 10px;
-					background-color: $gray-light;
+					background-color: #d7d7d7;
 					margin: 0 auto;
 					position: relative;
 					overflow: hidden;
@@ -96,7 +96,7 @@
 						height: 100%;
 						left: 0;
 						top: 0;
-						background: rgb(255, 217, 0);
+						background: hsl(51, 100%, 50%);
 					}
 
 					&.line1::after {
@@ -117,24 +117,26 @@
 				}
 
 				& .val {
-					flex: 1;
-					margin-left: 18px;
+					flex: 0.3;
+					margin-left: 5px;
 					font-size: 14px;
 					color: $gray-light;
+					display: flex;
+					justify-content: start;
 				}
 			}
 		}
 	}
 
 	.fieldComment {
-		max-width: 100%;
-		width: 89%;
+		width: 100%;
+		max-width: 85%;
 		min-height: 30px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
-		box-shadow: 0 0 90px darken($color: #cccccc5a, $amount: 30);
+		box-shadow: 0 0 90px darken($color: #cccccc3e, $amount: 30);
 		border-radius: 10px;
 		margin: 0 auto;
 
@@ -157,7 +159,7 @@
 			}
 
 			button[type='submit'] {
-				flex: 0.5;
+				flex: 0.4;
 				border: none;
 				outline: 0;
 				background-color: #000000a6;
@@ -165,6 +167,7 @@
 				cursor: pointer;
 				font-size: 15px;
 				font-weight: 500;
+				border-radius: 10px;
 			}
 		}
 	}

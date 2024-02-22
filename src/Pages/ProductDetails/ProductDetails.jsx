@@ -6,8 +6,8 @@ import ScreenSize from '../../assets/Svgs/Screen size.svg';
 import Delivrey from '../../assets/Svgs/Delivery.svg';
 import { details } from '../../../src/Data/details';
 import Reviews from './../../Components/Reviews/Reviews';
+import Footer from '../../Components/Footer/Footer';
 
-console.log(details);
 const ProductDetails = () => {
 	const Memories = ['128GB', '256GB', '512GB', '1TB'];
 	const [changeText, setChangeText] = useState(true);
@@ -179,9 +179,9 @@ const ProductDetails = () => {
 						))}
 					</div>
 				</div>
-
 				<Reviews />
 			</section>
+			<Footer />
 		</>
 	);
 };
