@@ -2,7 +2,7 @@ import './Home.scss';
 import CardBanner from '../../Components/CardBanner/CardBanner';
 
 import Footer from '../../Components/Footer/Footer';
-import { homeProducts } from '../../datas/data';
+import { homeProducts } from '../../Data/data';
 import { easeOut, motion, spring } from 'framer-motion';
 import Card from '../../Components/Card/Card';
 import Headers from './../../Components/Headers/Headers';

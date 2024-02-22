@@ -1,4 +1,4 @@
-import { menus } from '../datas/dropdown';
+import { menus } from '../Data/dropdown';
 import DropdownItem from './DropdownItem/DropdownItem';
 import Search from '../Dropdown/SearchField/Search';
 import ArrowDown from '../../src/assets/Svgs/ArrowPrev.svg';

@@ -4,7 +4,8 @@ import './ProductDetails.scss';
 import Image from '../../assets/images/Image.png';
 import ScreenSize from '../../assets/Svgs/Screen size.svg';
 import Delivrey from '../../assets/Svgs/Delivery.svg';
-import {details} from '../../../src/datas/details';
+import { details } from '../../../src/Data/details';
+import Reviews from './../../Components/Reviews/Reviews';
 
 console.log(details);
 const ProductDetails = () => {
@@ -178,6 +179,8 @@ const ProductDetails = () => {
 						))}
 					</div>
 				</div>
+
+				<Reviews />
 			</section>
 		</>
 	);

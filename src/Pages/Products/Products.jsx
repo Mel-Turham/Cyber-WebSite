@@ -1,5 +1,5 @@
 import './Products.scss';
-import { ProductsItem } from '../../datas/data';
+import { ProductsItem } from '../../Data/data';
 import Arrow from '../../assets/Svgs/ArrowPrev.svg';
 import { useState } from 'react';
 import Card from './../../Components/Card/Card';
@@ -65,7 +65,7 @@ const Products = () => {
 					</div>
 
 					<section className='productContainer'>
-						{ProductsItem.map(({ image, productName, price }) => {
+						{ProductsItem?.map(({ image, productName, price }) => {
 							return (
 								<Card
 									key={Math.random(Math.floor() * 20)}
