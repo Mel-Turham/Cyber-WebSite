@@ -1,4 +1,4 @@
-import './Comment.scss';
+
 import PropTypes from 'prop-types';
 import { AiFillStar } from 'react-icons/ai';
 
