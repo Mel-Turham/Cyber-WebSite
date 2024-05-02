@@ -23,7 +23,7 @@ const MenuDropdown = () => {
 							<div className='Top' onClick={() => handleHide(id)}>
 								<h3>{name}</h3>
 								<img
-									className={`arrowDown ${isHide[id] ? 'active' : ''}`}
+									className={`arrowDown ${isHide[id] ? '' : 'active'}`}
 									src={ArrowDown}
 									alt='Arrow icon'
 								/>
